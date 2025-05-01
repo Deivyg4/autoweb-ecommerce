@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - AutoWeb</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/productos.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoPartes<span>Japon</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <img src="img/cart.svg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Catálogo de Productos</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; Productos
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <aside class="filters">
+                    <div class="filter-group">
+                        <h3>Categorías</h3>
+                        <ul class="filter-list" id="category-filters">
+                            <li>
+                                <input type="checkbox" id="cat-all" name="categoria" value="all" checked>
+                                <label for="cat-all">Todos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cat-motor" name="categoria" value="motor">
+                                <label for="cat-motor">Motor</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cat-frenos" name="categoria" value="frenos">
+                                <label for="cat-frenos">Frenos</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cat-suspension" name="categoria" value="suspension">
+                                <label for="cat-suspension">Suspensión</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cat-electrico" name="categoria" value="electrico">
+                                <label for="cat-electrico">Sistema Eléctrico</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cat-accesorios" name="categoria" value="accesorios">
+                                <label for="cat-accesorios">Accesorios</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Precio</h3>
+                        <div class="price-range">
+                            <input type="range" id="price-range" min="0" max="500" step="10" value="500">
+                            <div class="price-labels">
+                                <span>$0</span>
+                                <span id="price-value">$500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Marca</h3>
+                        <ul class="filter-list" id="brand-filters">
+                            <li>
+                                <input type="checkbox" id="brand-all" name="marca" value="all" checked>
+                                <label for="brand-all">Todas</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-bosch" name="marca" value="bosch">
+                                <label for="brand-bosch">Bosch</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-gates" name="marca" value="gates">
+                                <label for="brand-gates">Gates</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-monroe" name="marca" value="monroe">
+                                <label for="brand-monroe">Monroe</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-ngk" name="marca" value="ngk">
+                                <label for="brand-ngk">NGK</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn" id="apply-filters">Aplicar Filtros</button>
+                </aside>
+                <div class="products-content">
+                    <div class="products-header">
+                        <div class="products-count">
+                            <span id="product-count">24</span> productos encontrados
+                        </div>
+                        <div class="products-sort">
+                            <label for="sort-by">Ordenar por:</label>
+                            <select id="sort-by">
+                                <option value="relevance">Relevancia</option>
+                                <option value="price-low">Precio: Menor a Mayor</option>
+                                <option value="price-high">Precio: Mayor a Menor</option>
+                                <option value="name-asc">Nombre: A-Z</option>
+                                <option value="name-desc">Nombre: Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-grid" id="products-container">
+                        <!-- Los productos se cargarán dinámicamente con JavaScript -->
+                    </div>
+                    <div class="pagination">
+                        <button class="pagination-btn" id="prev-page" disabled>&laquo; Anterior</button>
+                        <div class="page-numbers" id="page-numbers">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</button>
+                            <button class="page-number">3</button>
+                        </div>
+                        <button class="pagination-btn" id="next-page">Siguiente &raquo;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutoWeb</h3>
+                    <p>Tu tienda de confianza para repuestos automotrices de calidad.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="productos.html?categoria=motor">Motor</a></li>
+                        <li><a href="productos.html?categoria=frenos">Frenos</a></li>
+                        <li><a href="productos.html?categoria=suspension">Suspensión</a></li>
+                        <li><a href="productos.html?categoria=electrico">Sistema Eléctrico</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@AutoWeb.com</p>
+                    <p><strong>Horario:</strong> Lun-Vie: 9am-6pm, Sáb: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoWeb. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

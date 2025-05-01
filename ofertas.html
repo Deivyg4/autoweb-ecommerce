@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Especiales - AutoWeb</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/ofertas.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoPartes<span>Japon</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="ofertas.html" class="active">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <img src="img/cart.svg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <section class="page-header ofertas-header">
+        <div class="container">
+            <h1>Ofertas Especiales</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; Ofertas
+            </div>
+        </div>
+    </section>
+
+    <section class="ofertas-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h2>¡SUPER DESCUENTOS!</h2>
+                    <p>Aprovecha nuestras ofertas por tiempo limitado</p>
+                    <div class="countdown-container">
+                        <div class="countdown-title">La oferta termina en:</div>
+                        <div class="countdown" id="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <span class="countdown-label">Días</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <span class="countdown-label">Horas</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <span class="countdown-label">Minutos</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <span class="countdown-label">Segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ofertas-destacadas">
+        <div class="container">
+            <h2 class="section-title">Ofertas Destacadas</h2>
+            <div class="ofertas-grid">
+                <div class="oferta-card">
+                    <div class="oferta-badge">-30%</div>
+                    <div class="oferta-image">
+                        <img src="img/producto1.jpg" alt="Filtro de Aceite Premium">
+                    </div>
+                    <div class="oferta-content">
+                        <h3>Filtro de Aceite Premium</h3>
+                        <p>Compatible con múltiples marcas y modelos</p>
+                        <div class="oferta-price">
+                            <span class="price-old">$25.99</span>
+                            <span class="price-current">$19.99</span>
+                        </div>
+                        <div class="oferta-save">
+                            <span>Ahorras: $6.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="1" data-name="Filtro de Aceite Premium" data-price="19.99">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="oferta-card">
+                    <div class="oferta-badge">-25%</div>
+                    <div class="oferta-image">
+                        <img src="img/producto5.jpg" alt="Amortiguadores Delanteros">
+                    </div>
+                    <div class="oferta-content">
+                        <h3>Amortiguadores Delanteros</h3>
+                        <p>Mejora la estabilidad y el confort</p>
+                        <div class="oferta-price">
+                            <span class="price-old">$105.00</span>
+                            <span class="price-current">$78.50</span>
+                        </div>
+                        <div class="oferta-save">
+                            <span>Ahorras: $26.50</span>
+                        </div>
+                        <button class="add-to-cart" data-id="5" data-name="Amortiguadores Delanteros" data-price="78.50">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="oferta-card">
+                    <div class="oferta-badge">-20%</div>
+                    <div class="oferta-image">
+                        <img src="img/producto7.jpg" alt="Kit de Distribución">
+                    </div>
+                    <div class="oferta-content">
+                        <h3>Kit de Distribución</h3>
+                        <p>Incluye bomba de agua y tensor</p>
+                        <div class="oferta-price">
+                            <span class="price-old">$150.00</span>
+                            <span class="price-current">$120.00</span>
+                        </div>
+                        <div class="oferta-save">
+                            <span>Ahorras: $30.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="7" data-name="Kit de Distribución" data-price="120.00">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ofertas-productos">
+        <div class="container">
+            <h2 class="section-title">Todas las Ofertas</h2>
+            
+            <div class="ofertas-filtros">
+                <div class="filtro-grupo">
+                    <label for="filtro-categoria">Categoría:</label>
+                    <select id="filtro-categoria">
+                        <option value="todas">Todas las categorías</option>
+                        <option value="motor">Motor</option>
+                        <option value="frenos">Frenos</option>
+                        <option value="suspension">Suspensión</option>
+                        <option value="electrico">Sistema Eléctrico</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="filtro-descuento">Descuento:</label>
+                    <select id="filtro-descuento">
+                        <option value="todos">Todos los descuentos</option>
+                        <option value="10">10% o más</option>
+                        <option value="20">20% o más</option>
+                        <option value="30">30% o más</option>
+                        <option value="40">40% o más</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="filtro-orden">Ordenar por:</label>
+                    <select id="filtro-orden">
+                        <option value="descuento">Mayor descuento</option>
+                        <option value="precio-bajo">Precio: Menor a Mayor</option>
+                        <option value="precio-alto">Precio: Mayor a Menor</option>
+                        <option value="nombre">Nombre</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid" id="ofertas-container">
+                <!-- Los productos en oferta se cargarán dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-page" disabled>&laquo; Anterior</button>
+                <div class="page-numbers" id="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                </div>
+                <button class="pagination-btn" id="next-page">Siguiente &raquo;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="promocion-especial">
+        <div class="container">
+            <div class="promocion-card">
+                <div class="promocion-content">
+                    <h2>¡OFERTA EXCLUSIVA ONLINE!</h2>
+                    <h3>Cupón de descuento</h3>
+                    <div class="cupon-code">AUTOPARTES15</div>
+                    <p>Obtén un 15% adicional en tu primera compra</p>
+                    <p class="promocion-small">Válido hasta el 31/12/2025. No acumulable con otras promociones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Suscríbete a Nuestro Boletín</h2>
+                <p>Recibe ofertas exclusivas y novedades directamente en tu correo</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutoWeb</h3>
+                    <p>Tu tienda de confianza para repuestos automotrices de calidad.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="productos.html?categoria=motor">Motor</a></li>
+                        <li><a href="productos.html?categoria=frenos">Frenos</a></li>
+                        <li><a href="productos.html?categoria=suspension">Suspensión</a></li>
+                        <li><a href="productos.html?categoria=electrico">Sistema Eléctrico</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@AutoWeb.com</p>
+                    <p><strong>Horario:</strong> Lun-Vie: 9am-6pm, Sáb: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoWeb. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

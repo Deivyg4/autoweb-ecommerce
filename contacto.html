@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - AutoPartes Express</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoPartes<span>Express</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <img src="img/cart.svg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contacto</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; Contacto
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2>Información de Contacto</h2>
+                    <p>Estamos aquí para ayudarte. No dudes en contactarnos por cualquiera de los siguientes medios o utiliza nuestro formulario de contacto.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="img/location-icon.svg" alt="Dirección">
+                        </div>
+                        <div class="contact-text">
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Ciudad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="img/phone-icon.svg" alt="Teléfono">
+                        </div>
+                        <div class="contact-text">
+                            <h3>Teléfono</h3>
+                            <p>(123) 456-7890</p>
+                            <p>(123) 456-7891</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="img/email-icon.svg" alt="Email">
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@autopartesexpress.com</p>
+                            <p>ventas@autopartesexpress.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="img/clock-icon.svg" alt="Horario">
+                        </div>
+                        <div class="contact-text">
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                            <p>Sábados: 9:00 AM - 2:00 PM</p>
+                            <p>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-media">
+                            <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" style="--i:8"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" style="--i:9"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" style="--i:10"><i class='bx bxl-whatsapp'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto*</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje*</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                He leído y acepto la <a href="#">política de privacidad</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="map-container">
+                <!-- Aquí iría un mapa interactivo, pero para este ejemplo usaremos una imagen estática -->
+                <img src="img/mapa.jpg" alt="Ubicación de AutoPartes Express" class="map-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuáles son los métodos de pago aceptados?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos tarjetas de crédito y débito (Visa, MasterCard, American Express), transferencias bancarias, PayPal y pago contra entrega en algunas zonas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuánto tiempo tarda en llegar mi pedido?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo de entrega varía según tu ubicación. Generalmente, los pedidos se entregan en 2-5 días hábiles en zonas urbanas y 5-7 días hábiles en zonas rurales.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen garantía en sus productos?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros productos cuentan con garantía. El período de garantía varía según el tipo de producto y la marca, desde 3 meses hasta 2 años.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cómo puedo saber si una pieza es compatible con mi vehículo?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En la descripción de cada producto encontrarás información sobre compatibilidad. También puedes usar nuestro buscador de piezas por modelo de vehículo o contactar a nuestro equipo técnico para asesoría personalizada.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo devolver un producto si no es lo que necesito?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los 15 días posteriores a la recepción del producto, siempre que esté en su empaque original y no haya sido utilizado. Algunos productos especiales pueden tener políticas de devolución diferentes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen servicio de instalación?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Actualmente no ofrecemos servicio de instalación directo, pero podemos recomendarte talleres asociados de confianza donde podrán instalar las piezas que adquieras con nosotros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Necesitas Ayuda Urgente?</h2>
+                <p>Nuestro equipo de soporte está disponible para atenderte rápidamente</p>
+                <div class="cta-buttons">
+                    <a href="tel:1234567890" class="btn">Llamar Ahora</a>
+                    <a href="mailto:soporte@autopartesexpress.com" class="btn btn-outline">Enviar Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutoPartes Express</h3>
+                    <p>Tu tienda de confianza para repuestos automotrices de calidad.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="productos.html?categoria=motor">Motor</a></li>
+                        <li><a href="productos.html?categoria=frenos">Frenos</a></li>
+                        <li><a href="productos.html?categoria=suspension">Suspensión</a></li>
+                        <li><a href="productos.html?categoria=electrico">Sistema Eléctrico</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@autopartesexpress.com</p>
+                    <p><strong>Horario:</strong> Lun-Vie: 9am-6pm, Sáb: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoPartes Express. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad para las preguntas frecuentes
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', function() {
+                    // Cerrar otras respuestas
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-toggle').textContent = '+';
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        }
+                    });
+                    
+                    // Alternar la respuesta actual
+                    item.classList.toggle('active');
+                    
+                    if (item.classList.contains('active')) {
+                        toggle.textContent = '-';
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        toggle.textContent = '+';
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+            
+            // Validación del formulario de contacto
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validación básica
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !email || !subject || !message) {
+                        alert('Por favor, completa todos los campos obligatorios.');
+                        return;
+                    }
+                    
+                    // Validar formato de email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Por favor, introduce un correo electrónico válido.');
+                        return;
+                    }
+                    
+                    // Aquí iría el código para enviar el formulario
+                    alert('¡Gracias por tu mensaje! Te responderemos a la brevedad.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

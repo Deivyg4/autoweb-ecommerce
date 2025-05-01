@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoWeb - Tienda de Repuestos Automotrices</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoPartes<span>Japon</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <img src="img/cart.svg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Los Mejores Repuestos para tu Vehículo</h2>
+                <p>Calidad garantizada y envío a todo el país</p>
+                <a href="productos.html" class="btn">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Categorías Populares</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="img/motor.jpg" alt="Motor">
+                    <h3>Motor</h3>
+                    <a href="productos.html?categoria=motor" class="btn-small">Ver Productos</a>
+                </div>
+                <div class="category-card">
+                    <img src="img/frenos.jpg" alt="Frenos">
+                    <h3>Frenos</h3>
+                    <a href="productos.html?categoria=frenos" class="btn-small">Ver Productos</a>
+                </div>
+                <div class="category-card">
+                    <img src="img/suspension.jpg" alt="Suspensión">
+                    <h3>Suspensión</h3>
+                    <a href="productos.html?categoria=suspension" class="btn-small">Ver Productos</a>
+                </div>
+                <div class="category-card">
+                    <img src="img/electrico.jpg" alt="Sistema Eléctrico">
+                    <h3>Sistema Eléctrico</h3>
+                    <a href="productos.html?categoria=electrico" class="btn-small">Ver Productos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/producto1.jpg" alt="Filtro de Aceite">
+                        <div class="product-tag">Oferta</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Filtro de Aceite Premium</h3>
+                        <p class="product-description">Compatible con múltiples marcas y modelos</p>
+                        <div class="product-price">
+                            <span class="price-old">$25.99</span>
+                            <span class="price-current">$19.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="1" data-name="Filtro de Aceite Premium" data-price="19.99">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/producto2.jpg" alt="Pastillas de Freno">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pastillas de Freno Cerámicas</h3>
+                        <p class="product-description">Mayor durabilidad y rendimiento</p>
+                        <div class="product-price">
+                            <span class="price-current">$45.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="2" data-name="Pastillas de Freno Cerámicas" data-price="45.99">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/producto3.jpg" alt="Batería">
+                        <div class="product-tag">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Batería de Alto Rendimiento</h3>
+                        <p class="product-description">Garantía de 3 años, libre de mantenimiento</p>
+                        <div class="product-price">
+                            <span class="price-current">$89.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="3" data-name="Batería de Alto Rendimiento" data-price="89.99">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/producto4.jpg" alt="Aceite de Motor">
+                    </div>
+                    <div class="product-info">
+                        <h3>Aceite Sintético 5W-30</h3>
+                        <p class="product-description">Protección superior para tu motor</p>
+                        <div class="product-price">
+                            <span class="price-current">$32.50</span>
+                        </div>
+                        <button class="add-to-cart" data-id="4" data-name="Aceite Sintético 5W-30" data-price="32.50">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="productos.html" class="btn">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="img/shipping.svg" alt="Envío">
+                    </div>
+                    <h3>Envío Gratis</h3>
+                    <p>En compras mayores a $100</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="img/warranty.svg" alt="Garantía">
+                    </div>
+                    <h3>Garantía</h3>
+                    <p>Todos nuestros productos tienen garantía</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="img/support.svg" alt="Soporte">
+                    </div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Asesoría especializada</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="img/secure.svg" alt="Seguro">
+                    </div>
+                    <h3>Pago Seguro</h3>
+                    <p>Transacciones 100% seguras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Suscríbete a Nuestro Boletín</h2>
+                <p>Recibe ofertas exclusivas y novedades directamente en tu correo</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutoWeb</h3>
+                    <p>Tu tienda de confianza para repuestos automotrices de calidad.</p>
+                    <div class="social-media">
+                        <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" style="--i:8"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" style="--i:9"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" style="--i:10"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#" style="--i:11"><i class='bx bx-envelope'></i></a>
+                        <a href="#" style="--i:12"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" style="--i:13"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="productos.html?categoria=motor">Motor</a></li>
+                        <li><a href="productos.html?categoria=frenos">Frenos</a></li>
+                        <li><a href="productos.html?categoria=suspension">Suspensión</a></li>
+                        <li><a href="productos.html?categoria=electrico">Sistema Eléctrico</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@AutoWeb.com</p>
+                    <p><strong>Horario:</strong> Lun-Vie: 9am-6pm, Sáb: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoWeb. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

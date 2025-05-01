@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - AutoPartes Express</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoPartes<span>Express</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <img src="img/cart.svg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Sobre Nosotros</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; Nosotros
+            </div>
+        </div>
+    </section>
+
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Nuestra Historia</h2>
+                    <p>Fundada en 2010, <strong>AutoPartes Express</strong> nació con la visión de ofrecer repuestos automotrices de alta calidad a precios accesibles. Lo que comenzó como una pequeña tienda familiar, se ha convertido en uno de los distribuidores más confiables del mercado.</p>
+                    <p>Con más de una década de experiencia, hemos crecido constantemente, ampliando nuestro catálogo de productos y mejorando nuestros servicios para satisfacer las necesidades de nuestros clientes.</p>
+                    <p>Hoy en día, contamos con un amplio inventario de más de 10,000 productos de las mejores marcas del mercado, y un equipo de profesionales altamente capacitados para brindar asesoría especializada.</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/about-store.jpg" alt="Nuestra Tienda">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-box">
+                    <div class="mission-icon">
+                        <img src="img/mission-icon.svg" alt="Misión">
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Proporcionar repuestos automotrices de la más alta calidad, ofreciendo un servicio excepcional y asesoría especializada, para garantizar la satisfacción total de nuestros clientes y contribuir al óptimo funcionamiento de sus vehículos.</p>
+                </div>
+                <div class="vision-box">
+                    <div class="vision-icon">
+                        <img src="img/vision-icon.svg" alt="Visión">
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser reconocidos como el distribuidor líder de repuestos automotrices, destacándonos por nuestra excelencia en servicio, calidad de productos y compromiso con la innovación, expandiendo nuestra presencia a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="img/quality-icon.svg" alt="Calidad">
+                    </div>
+                    <h3>Calidad</h3>
+                    <p>Ofrecemos productos que cumplen con los más altos estándares de calidad y durabilidad.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="img/integrity-icon.svg" alt="Integridad">
+                    </div>
+                    <h3>Integridad</h3>
+                    <p>Actuamos con honestidad y transparencia en todas nuestras operaciones y relaciones comerciales.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="img/service-icon.svg" alt="Servicio">
+                    </div>
+                    <h3>Servicio</h3>
+                    <p>Nos esforzamos por brindar una atención personalizada y superar las expectativas de nuestros clientes.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="img/innovation-icon.svg" alt="Innovación">
+                    </div>
+                    <h3>Innovación</h3>
+                    <p>Buscamos constantemente nuevas formas de mejorar nuestros productos y servicios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/team-1.jpg" alt="Carlos Rodríguez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Carlos Rodríguez</h3>
+                        <p class="member-position">Director General</p>
+                        <p class="member-description">Con más de 20 años de experiencia en el sector automotriz, Carlos lidera nuestra empresa con visión y pasión.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/team-2.jpg" alt="Laura Martínez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Laura Martínez</h3>
+                        <p class="member-position">Gerente de Ventas</p>
+                        <p class="member-description">Especialista en atención al cliente, Laura se asegura de que cada cliente reciba el mejor servicio posible.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/team-3.jpg" alt="Miguel Sánchez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Miguel Sánchez</h3>
+                        <p class="member-position">Jefe de Taller</p>
+                        <p class="member-description">Técnico certificado con amplia experiencia, Miguel lidera nuestro equipo de asesores técnicos.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/team-4.jpg" alt="Ana López">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ana López</h3>
+                        <p class="member-position">Responsable de Logística</p>
+                        <p class="member-description">Ana se encarga de que todos los pedidos lleguen a tiempo y en perfectas condiciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <h3>Amplio Catálogo</h3>
+                    <p>Contamos con más de 10,000 productos para todas las marcas y modelos de vehículos.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Trabajamos únicamente con las mejores marcas del mercado y ofrecemos garantía en todos nuestros productos.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <h3>Asesoría Especializada</h3>
+                    <p>Nuestro equipo de técnicos certificados está siempre disponible para ayudarte a encontrar la pieza correcta.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <h3>Envío Rápido</h3>
+                    <p>Realizamos envíos a todo el país con tiempos de entrega optimizados.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">05</div>
+                    <h3>Precios Competitivos</h3>
+                    <p>Ofrecemos los mejores precios del mercado sin comprometer la calidad.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">06</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Nos preocupamos por entender tus necesidades y brindarte la mejor solución.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-years">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-clients">0</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-products">0</div>
+                    <div class="stat-label">Productos Disponibles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-brands">0</div>
+                    <div class="stat-label">Marcas Reconocidas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Excelente servicio y asesoría. Encontré exactamente la pieza que necesitaba para mi vehículo a un precio muy competitivo. ¡Totalmente recomendado!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/client-1.jpg" alt="Roberto Gómez">
+                        <div>
+                            <h4>Roberto Gómez</h4>
+                            <p>Cliente desde 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"La calidad de los productos es excepcional. He comprado varias veces y siempre quedo satisfecho. El envío es rápido y el servicio al cliente es de primera."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/client-2.jpg" alt="María Fernández">
+                        <div>
+                            <h4>María Fernández</h4>
+                            <p>Cliente desde 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Gracias a su asesoría técnica pude solucionar un problema complicado en mi auto. El personal es muy profesional y conocedor. Definitivamente volveré a comprar aquí."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/client-3.jpg" alt="Javier Torres">
+                        <div>
+                            <h4>Javier Torres</h4>
+                            <p>Cliente desde 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prev-testimonial" class="testimonial-btn">&lt;</button>
+                <div class="testimonial-dots" id="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button id="next-testimonial" class="testimonial-btn">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para encontrar las piezas que necesitas?</h2>
+                <p>Explora nuestro catálogo de productos o contáctanos para recibir asesoría personalizada.</p>
+                <div class="cta-buttons">
+                    <a href="productos.html" class="btn">Ver Productos</a>
+                    <a href="contacto.html" class="btn btn-outline">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutoPartes Express</h3>
+                    <p>Tu tienda de confianza para repuestos automotrices de calidad.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="productos.html?categoria=motor">Motor</a></li>
+                        <li><a href="productos.html?categoria=frenos">Frenos</a></li>
+                        <li><a href="productos.html?categoria=suspension">Suspensión</a></li>
+                        <li><a href="productos.html?categoria=electrico">Sistema Eléctrico</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@autopartesexpress.com</p>
+                    <p><strong>Horario:</strong> Lun-Vie: 9am-6pm, Sáb: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoPartes Express. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animación de estadísticas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para animar contadores
+            function animateCounter(elementId, finalValue, duration) {
+                const element = document.getElementById(elementId);
+                if (!element) return;
+                
+                let startTime = null;
+                const startValue = 0;
+                
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    const progress = Math.min((timestamp - startTime) / duration, 1);
+                    const currentValue = Math.floor(progress * (finalValue - startValue) + startValue);
+                    element.textContent = currentValue.toLocaleString();
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                }
+                
+                window.requestAnimationFrame(step);
+            }
+            
+            // Función para verificar si un elemento está visible en la ventana
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            
+            // Iniciar animación cuando la sección de estadísticas sea visible
+            const statsSection = document.querySelector('.stats');
+            let animated = false;
+            
+            function checkIfVisible() {
+                if (statsSection && isElementInViewport(statsSection) && !animated) {
+                    animateCounter('stat-years', 13, 2000); // 13 años de experiencia
+                    animateCounter('stat-clients', 15000, 2000); // 15,000 clientes
+                    animateCounter('stat-products', 10000, 2000); // 10,000 productos
+                    animateCounter('stat-brands', 50, 2000); // 50 marcas
+                    animated = true;
+                }
+            }
+            
+            // Verificar al cargar y al hacer scroll
+            checkIfVisible();
+            window.addEventListener('scroll', checkIfVisible);
+            
+            // Slider de testimonios
+            const slider = document.getElementById('testimonials-slider');
+            const dots = document.querySelectorAll('#testimonial-dots .dot');
+            const prevBtn = document.getElementById('prev-testimonial');
+            const nextBtn = document.getElementById('next-testimonial');
+            
+            if (slider && dots.length && prevBtn && nextBtn) {
+                let currentSlide = 0;
+                const totalSlides = document.querySelectorAll('.testimonial-item').length;
+                
+                function showSlide(index) {
+                    if (index < 0) index = totalSlides - 1;
+                    if (index >= totalSlides) index = 0;
+                    
+                    currentSlide = index;
+                    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Actualizar dots
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentSlide);
+                    });
+                }
+                
+                prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+                nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+                
+                // Permitir clic en los dots
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => showSlide(i));
+                });
+                
+                // Auto-rotación del slider
+                setInterval(() => {
+                    showSlide(currentSlide + 1);
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
